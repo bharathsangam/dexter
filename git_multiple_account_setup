@@ -1,0 +1,35 @@
+~/.gitconfig
+[user]
+    name = bharathsangampinkvilla
+    email = bharath.sangam@pinkvilla.com
+
+[includeIf "gitdir:/var/www/html/git/"]
+    path = ~/.gitconfig-pinkvilla
+
+[includeIf "gitdir:/var/www/html/git_backup/"]
+    path = ~/.gitconfig-personal
+    
+
+~/.gitconfig-pinkvilla
+[user]
+    name = bharathsangampinkvilla
+    email = bharath.sangam@pinkvilla.com
+
+[credential]
+    helper = store --file ~/.git-credentials-pinkvilla
+
+
+~/.gitconfig-personal
+[user]
+    name = bharathsangam
+    email = bharath.k.sangam@gmail.com
+
+[credential]
+    helper = store --file ~/.git-credentials-personal
+    
+    
+~/.git-credentials-pinkvilla
+https://bharathsangampinkvilla:PAT_TOKEN@github.com
+
+~/.git-credentials-personal
+https://bharathsangam:PAT_TOKEN@github.com
